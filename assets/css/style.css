@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  border: 1px solid black;
+}
+
+.buton {
+  width: 100px;
+  height: 50px;
+  background-color: chocolate;
+  display: inline-block;
+  text-align: center;
+  padding: 15px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.buton::before {
+  content: "";
+  position: absolute;
+  left: -150px;
+  transition: 1s all linear;
+  top: 0;
+  width: 130px;
+  height: 50px;
+  background-color: crimson;
+  transform: skew(-30deg);
+  z-index: 1;
+}
+
+.buton:hover::before {
+  left: -15px;
+}
+
+.buton .text {
+  z-index: 2;
+  position: relative;
+  color: white;
+  font-size: 20px;
+  font-style: normal;
+  transform: skew(30deg);
+}
+/*# sourceMappingURL=style.css.map */
